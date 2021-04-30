@@ -53,8 +53,11 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 Implement one failing test and at least one passing test:
 
 Passing Test:
+
   1.Given the range and correct reading.
+
 Failing Test:
+
   1.Given the range and invalid reading.
   2.Given the invalid range and correct reading.
   3.Given the invalid range and invalid reading.
