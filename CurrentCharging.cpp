@@ -23,21 +23,21 @@ void CCurrentSet::initCurrentSet(int currentSampleData)
     num = 1;
 }
 
-void CCurrentReport::generateContinuesCurrentRange(vector<int>& samples)
+void CCurrentReport::generateContinuesCurrentRange()
 {
     CCurrentSet set;
-    set.initCurrentSet(samples[0]);
-    for (int iter = 1; iter < samples.size(); ++iter)
+    set.initCurrentSet(sortedSamples[0]);
+    for (int iter = 1; iter < sortedSamples.size(); ++iter)
     {
-        if (samples[iter] - samples[iter - 1] < 2)
+        if (sortedSamples[iter] - sortedSamples[iter - 1] < 2)
         {
-             set.highval = samples[iter];
+             set.highval = sortedSamples[iter];
              set.num += 1;   
         }
         else
         {
             CurrentSetSamples.push_back(set);
-            set.initCurrentSet(samples[iter]);
+            set.initCurrentSet(sortedSamples[iter]);
         }
     }
     CurrentSetSamples.push_back(set);

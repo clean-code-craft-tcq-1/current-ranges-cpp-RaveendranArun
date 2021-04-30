@@ -28,7 +28,7 @@ private:
 public:
     CCurrentReport(vector<int>& samples);
     vector<int> sortPeriodicCharingCurrentSamples(vector<int>& samples);
-    void generateContinuesCurrentRange(vector<int>& samples);
+    void generateContinuesCurrentRange();
     void consoleReport();
     bool validateRangeandReadings(int x, int y, int z);
     ~CCurrentReport();
